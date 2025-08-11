@@ -10,17 +10,79 @@ or school—it will look and work exactly the same.
 So even if you didn’t build the toy, you can still box it up if you:
 
 1. Ask for the recipe. It tells you what ingredients (dependencies) the project needs.
-This is usually in a file like:
-* README.md (instructions)
-* requirements.txt (Python)
-* package.json (Node.js)
-* composer.json (PHP)
+This is usually in files like:
+
+DOCUMENTATION:
+* README.md/README.txt (main instructions)
+* INSTALL.md (installation guide)
+* docs/ folder (detailed documentation)
+
+LANGUAGE DEPENDENCIES:
+* Python: requirements.txt, Pipfile, pyproject.toml, setup.py, environment.yml, poetry.lock
+* Node.js: package.json, package-lock.json, yarn.lock, pnpm-lock.yaml, .nvmrc
+* PHP: composer.json, composer.lock
+* Ruby: Gemfile, Gemfile.lock, .ruby-version
+* Go: go.mod, go.sum, vendor/ folder
+* Java: pom.xml (Maven), build.gradle (Gradle), ivy.xml
+* C#/.NET: *.csproj, *.sln, packages.config
+* Rust: Cargo.toml, Cargo.lock
+* Swift: Package.swift, Package.resolved
+* R: DESCRIPTION, renv.lock
+* Julia: Project.toml, Manifest.toml
+
+FRONTEND/WEB:
+* webpack.config.js, vite.config.js, rollup.config.js
+* angular.json, vue.config.js, next.config.js, svelte.config.js
+* gulpfile.js, grunt.js
+
+CONFIGURATION:
+* .env files (environment variables)
+* config/ folder, settings.json, appsettings.json
+* .ini, .yaml, .yml, .toml files
+* Makefile, CMakeLists.txt
+
+DATABASE/DATA:
+* migrations/, db/migrate/ (database migrations)
+* seeds/, fixtures/ (database seed data)
+* schema.sql, *.sql files
+* database.yml, db.json
+* CSV, JSON, XML data files the app needs
+
+STATIC ASSETS/MEDIA (YES, these ARE dependencies!):
+* Images: *.png, *.jpg, *.jpeg, *.gif, *.svg, *.ico, *.webp
+* Videos: *.mp4, *.avi, *.mov, *.webm, *.mkv
+* Audio: *.mp3, *.wav, *.ogg, *.m4a
+* Fonts: *.ttf, *.otf, *.woff, *.woff2
+* CSS/Styles: *.css, *.scss, *.sass, *.less
+* Static folders: public/, static/, assets/, media/
+
+CONTAINER/DEPLOYMENT:
+* Dockerfile, Dockerfile.*, docker-compose.yml
+* .dockerignore
+* k8s/, kubernetes/ folders
+* terraform/, ansible/
+
+CI/CD:
+* .github/workflows/ (GitHub Actions)
+* .gitlab-ci.yml, Jenkinsfile, .travis.yml
+
+DEVELOPMENT TOOLS:
+* .editorconfig, .prettierrc
+* eslint.json, tslint.json
+* jest.config.js, .babelrc
+* tsconfig.json, jsconfig.json
+
+MOBILE:
+* Android: build.gradle, gradle.properties
+* iOS: Podfile, Podfile.lock
+* Flutter: pubspec.yaml, pubspec.lock
+* React Native: metro.config.js
 
 2. Find the “start button”. This will be the CMD or ENTRYPOINT in your Dockerfile.
 Figure out how to start the app:
-* Python → python main.py
-* Node.js → npm start
-* PHP → php artisan serve
+* Python -> python main.py
+* Node.js -> npm start
+* PHP -> php artisan serve
 
 
 3. Write the box instructions (Dockerfile)
