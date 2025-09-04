@@ -189,7 +189,72 @@ If you follow this process for every project, you don't need to be part of the d
 2. Find the start button  
 3. Make a box that runs it anywhere
 
+## Infrastructure Requirements Checklist
+
+### System Requirements
+- [ ] **Operating System:** Linux (production), Windows/macOS (development)
+- [ ] **CPU Architecture:** x86_64 (AMD64), ARM64 (for M1 Macs, ARM servers)
+- [ ] **Memory:** Minimum 2GB RAM for Docker, 4GB+ recommended
+- [ ] **Storage:** 20GB+ free space for images and containers
+- [ ] **Docker Version:** 20.10+ (check with `docker --version`)
+- [ ] **Docker Compose Version:** 2.0+ (check with `docker-compose --version`)
+
+### Network Requirements
+- [ ] **Ports:** Identify all ports your application uses
+- [ ] **External Services:** APIs, databases, caches the app connects to
+- [ ] **Load Balancing:** If multiple instances needed
+- [ ] **SSL/TLS:** Certificate requirements for HTTPS
+- [ ] **Domain Names:** Custom domains and DNS configuration
+
+### Data Requirements
+- [ ] **Database:** Type (PostgreSQL, MySQL, MongoDB, SQLite)
+- [ ] **Data Persistence:** What data needs to survive container restarts
+- [ ] **Backup Strategy:** How and when to backup data
+- [ ] **Migration Scripts:** Database schema updates
+- [ ] **Seed Data:** Initial data the application needs
+
+### Security Requirements
+- [ ] **Secrets:** API keys, passwords, certificates
+- [ ] **User Permissions:** Non-root user setup
+- [ ] **Network Security:** Firewall rules, VPN access
+- [ ] **Image Security:** Base image vulnerabilities
+- [ ] **Registry Access:** Private registry authentication
+
+### Environment Requirements
+- [ ] **Environment Variables:** All required env vars documented
+- [ ] **Configuration Files:** Config that varies by environment
+- [ ] **Timezone:** Application timezone requirements (like Asia/Manila)
+- [ ] **Locale:** Language and region settings
+- [ ] **Feature Flags:** Environment-specific features
+
+### Performance Requirements
+- [ ] **Resource Limits:** CPU and memory constraints
+- [ ] **Scaling:** Horizontal scaling requirements
+- [ ] **Caching:** Redis, Memcached, or other cache needs
+- [ ] **Monitoring:** Health checks and metrics collection
+- [ ] **Logging:** Log aggregation and retention
+
+### Deployment Requirements
+- [ ] **CI/CD Pipeline:** Automated build and deployment
+- [ ] **Registry:** Where to store Docker images
+- [ ] **Orchestration:** Docker Compose, Kubernetes, or Docker Swarm
+- [ ] **Blue/Green Deployment:** Zero-downtime deployment strategy
+- [ ] **Rollback Plan:** How to revert to previous version
+
+### External Dependencies
+- [ ] **Third-party Services:** Payment processors, email services, etc.
+- [ ] **CDN:** Content delivery network for static assets
+- [ ] **Message Queues:** RabbitMQ, Apache Kafka, AWS SQS
+- [ ] **Search Engines:** Elasticsearch, Solr, or similar
+- [ ] **Analytics:** Google Analytics, monitoring services
+
+### Development vs Production Differences
+- [ ] **Development:** Hot reload, debug mode, test databases
+- [ ] **Staging:** Production-like environment for testing
+- [ ] **Production:** Optimized builds, secure configurations, monitoring
+- [ ] **Resource Allocation:** Different CPU/memory per environment
+- [ ] **Data Volume:** Development uses sample data, production uses real data
+
 ---
 
 *This guide helps you containerize any project, regardless of the technology stack.*
-s
